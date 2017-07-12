@@ -4,7 +4,7 @@
 <div class="row	">
           <div class="col-lg-6 col-centered">
             <div class="well bs-component">
-		<form method="POST" action=/userPanti class="form-horizontal">
+		<form method="POST" action=/userPanti class="form-horizontal" enctype="multipart/form-data">
       <input type = "hidden" name = "_token" value = "<?php echo csrf_token() ?>">
       <fieldset>
 		    <legend>Register Panti</legend>
@@ -64,6 +64,11 @@
 		        <input type="text" class="form-control" name="kontak_panti" placeholder="Kontak Panti">
 		      </div>
 		    </div>
+
+			<div class="form-group">
+				<label for="image" class="col-lg-2 control-label">Foto Panti</label>
+				<input class="col-lg-10" type="file" name="image">
+			</div>
 
 		    <div class="form-group">
 		      <div class="col-lg-10 col-lg-offset-2">
